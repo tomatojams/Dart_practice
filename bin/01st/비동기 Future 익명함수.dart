@@ -7,9 +7,9 @@ void main() {
 void addNumbers(int number1, int number2) {
   print('$number1 + $number2 계산시작');
 
-  FutureOr<dynamic> Function()? sum = () {
+  sum() {
     print('$number1 + $number2 = ${number1 + number2}');
-  }; // 익명함수 활용
+  } // 익명함수 활용
 
   Future.delayed(Duration(seconds: 3), sum); // future delayed
 

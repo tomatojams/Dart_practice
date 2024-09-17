@@ -3,21 +3,23 @@ class Idol {
   final int membersCount;
 
   Idol(String name, int membersCount)
-      : this.name = name,
-        this.membersCount = membersCount;
+      : name = name,
+        membersCount = membersCount;
 
   Idol.fromMap(Map<String, dynamic> map)
-      : this.name = map['name'],
-        this.membersCount = map['membersCount'];
+      : name = map['name'],
+        membersCount = map['membersCount'];
 
   void sayName() {
-    print('나는 ${this.name}입니다. ${this.membersCount}명입니다.');
+    print('나는 $name입니다. $membersCount명입니다.');
   }
 }
 
 class GirlGroup implements Idol {
   // 모든기능 재정의
+  @override
   final String name;
+  @override
   final int membersCount;
 
   GirlGroup(
@@ -25,12 +27,13 @@ class GirlGroup implements Idol {
     this.membersCount,
   );
 
+  @override
   void sayName() {
-    print('저는 여자 아이돌 ${this.name}입니다');
+    print('저는 여자 아이돌 $name입니다');
   }
 
   void sayMembersCount() {
-    print('${this.name}멤버는 ${this.membersCount}명입니다.');
+    print('$name멤버는 $membersCount명입니다.');
   }
 }
 

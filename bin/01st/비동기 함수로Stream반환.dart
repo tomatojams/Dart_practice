@@ -1,6 +1,5 @@
 import 'dart:async';
 
-
 Stream<String> calculate(int number) async* {
   for (int i = 0; i < 5; i++) {
     yield 'i =$i';
